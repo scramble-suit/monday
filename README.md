@@ -8,7 +8,7 @@ Installing
 ====
 
 ```
-go get github.com/goodsign/monday
+go get github.com/writeas/monday
 ```
 
 Usage
