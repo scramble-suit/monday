@@ -81,3 +81,37 @@ func ListLocales() []Locale {
 		LocaleCsCZ,
 	}
 }
+
+// FuzzyLocale returns a locale from a two-character language string.
+func FuzzyLocale(lang string) Locale {
+	locs := map[string]Locale{
+		"bg": LocaleBgBG,
+		"ca": LocaleCaES,
+		"cs": LocaleCsCZ,
+		"da": LocaleDaDK,
+		"de": LocaleDeDE,
+		"el": LocaleElGR,
+		"en": LocaleEnUS,
+		"es": LocaleEsES,
+		"fi": LocaleFiFI,
+		"fr": LocaleFrFR,
+		"hu": LocaleHuHU,
+		"id": LocaleIdID,
+		"it": LocaleItIT,
+		"ja": LocaleJaJP,
+		"nb": LocaleNbNO,
+		"nl": LocaleNlNL,
+		"nn": LocaleNnNO,
+		"pl": LocalePlPL,
+		"pt": LocalePtBR,
+		"ro": LocaleRoRO,
+		"ru": LocaleRuRU,
+		"sv": LocaleSvSE,
+		"tr": LocaleTrTR,
+		"zh": LocaleZhCN,
+	}
+	if l, ok := locs[lang]; ok {
+		return l
+	}
+	return LocaleEnUS
+}
